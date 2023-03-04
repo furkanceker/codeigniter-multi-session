@@ -8,6 +8,7 @@
 <body>
 <div class="container">
     <h3 class="text-center">Giriş Yap</h3>
+    <hr>
     <div class="row">
         <div class="col-md-6 col-md-offset-3 well">
             <form action="<?= base_url("giris-yap") ?>" method="post">

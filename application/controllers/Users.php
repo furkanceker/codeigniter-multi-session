@@ -8,4 +8,8 @@ class Users extends CI_Controller {
     public function login_form(){
         $this->load->view('login_v');
     }
+
+    public function login(){
+        $this->load->view('homepage_v');
+    }
 }
