@@ -15,10 +15,16 @@
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" class="form-control" name="email" placeholder="Email">
+                    <?php if(isset($form_error)) { ?>
+                        <small class="text-danger pull-right"><?= form_error("email") ?></small>
+                    <?php } ?>
                 </div>
                 <div class="form-group">
                     <label>Şifre</label>
                     <input type="password" class="form-control" name="password" placeholder="Şifre">
+                    <?php if(isset($form_error)) { ?>
+                        <small class="text-danger pull-right"><?= form_error("password") ?></small>
+                    <?php } ?>
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Giriş Yap</button>
             </form>
