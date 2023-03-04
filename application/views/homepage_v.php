@@ -38,10 +38,12 @@
                     <th>Ürün Adı</th>
                 </thead>
                 <tbody>
+                  <?php foreach($products as $row) { ?> 
                     <tr>
-                        <td>1</td>
-                        <td>Bilgisayar</td>
+                        <td><?= $row->id ?></td>
+                        <td><?= $row->product_name ?></td>
                     </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
