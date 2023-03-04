@@ -7,6 +7,20 @@ class Users extends CI_Controller {
         $this->load->model("user_model");
     }
 
+    public function index(){
+
+        $user_list = $this->session->userdata("user_list");
+        if($user_list) { 
+
+            $user = reset($user_list);
+
+            redirect(base_url("anasayfa/".md5($user->email)));
+
+        } else {
+            redirect(base_url("giris"));
+        }
+    }
+
     public function login_form(){
         $this->load->view('login_v');
     }
