@@ -5,7 +5,7 @@ class Users extends CI_Controller {
         parent::__construct();
     }
 
-    public function index(){
-        echo "İndex";
+    public function login_form(){
+        $this->load->view('login_v');
     }
 }
