@@ -19,8 +19,14 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a target="_blank" href="<?= base_url("giris") ?>">Başka Hesapla Oturum Aç</a></li>
+            <?php foreach($user_list as $item) { ?> 
+              <?php if(md5($item->email) != md5($user->email)) { ?> 
+              <li><a target="_blank" href="<?= base_url("anasayfa/".md5($item->email)) ?>"><strong><?= $item->full_name ?></strong> ile Oturum Aç</a></li>
+              <?php } ?>
+            <?php } ?>
             <li role="separator" class="divider"></li>
+            <li><a target="_blank" href="<?= base_url("giris") ?>">Başka Hesap ile Oturum Aç</a></li>
+            <li><a href="<?= base_url("toplu-cikis") ?>">Tüm Hesaplardan Çıkış Yap</a></li>
             <li><a href="<?= base_url("cikis/".md5($user->email)) ?>">Çıkış Yap</a></li>
           </ul>
         </li>

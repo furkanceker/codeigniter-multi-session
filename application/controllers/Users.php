@@ -77,11 +77,9 @@ class Users extends CI_Controller {
         redirect(base_url('giris'));
     }
 
-    public function sil(){
+    public function all_logout(){
         $this->session->unset_userdata("user_list");
+        redirect(base_url('giris'));
     }
 
-    public function list(){
-        print_r($this->session->userdata("user_list"));
-    }
 }

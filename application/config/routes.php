@@ -53,6 +53,7 @@ $route['default_controller'] = 'users';
 $route['giris'] = 'users/login_form';
 $route['giris-yap'] = 'users/login';
 $route['cikis/(:any)'] = 'users/logout/$1';
+$route['toplu-cikis'] = 'users/all_logout';
 $route['anasayfa/(:any)'] = 'home/home/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
