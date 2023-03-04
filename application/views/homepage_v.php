@@ -21,7 +21,7 @@
           <ul class="dropdown-menu">
             <li><a target="_blank" href="<?= base_url("giris") ?>">Başka Hesapla Oturum Aç</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="<?= base_url("cikis") ?>">Çıkış Yap</a></li>
+            <li><a href="<?= base_url("cikis/".md5($user->email)) ?>">Çıkış Yap</a></li>
           </ul>
         </li>
       </ul>

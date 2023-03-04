@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'users';
 $route['giris'] = 'users/login_form';
 $route['giris-yap'] = 'users/login';
-$route['cikis'] = 'users/logout';
+$route['cikis/(:any)'] = 'users/logout/$1';
 $route['anasayfa/(:any)'] = 'home/home/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
